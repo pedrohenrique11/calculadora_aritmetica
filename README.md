@@ -1,35 +1,24 @@
-# vue-project
+# Vue Calculator
 
-This template should help get you started developing with Vue 3 in Vite.
+Uma calculadora simples desenvolvida usando Vue.js.
 
-## Recommended IDE Setup
+## Visão Geral
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Este projeto é uma calculadora interativa implementada com Vue.js. Permite realizar cálculos matemáticos básicos e funções trigonométricas.
 
-## Customize configuration
+## Funcionalidades
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- Adição, subtração, multiplicação e divisão
+- Funções trigonométricas (seno, cosseno, tangente)
+- Raiz quadrada, porcentagem, potência e logaritmo
 
-## Project Setup
+## Demonstração
 
-```sh
-npm install
-```
+Inclua uma captura de tela ou um GIF animado para mostrar a calculadora em funcionamento.
 
-### Compile and Hot-Reload for Development
+## Como Usar
 
-```sh
-npm run dev
-```
+1. Clone o repositório:
 
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+```bash
+git clone https://github.com/seu-usuario/vue-calculator.git
