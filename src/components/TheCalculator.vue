@@ -11,6 +11,20 @@ export default {
       ],
     };
   },
+  computed: {
+    computedResult() {
+      if(this.expression == '') {
+        return " "
+      }
+      else {
+        try {
+          return eval(this.expression).toString();
+        } catch (error) {
+          return 'Erro';
+        }
+      }
+    },
+  },
   methods: {
     handleButtonClick(button) {
       switch(button) {
@@ -160,6 +174,7 @@ export default {
 <template>
   <div class="calculator">
     <input v-model="expression" type="text" disabled>
+    <div class="result"> = {{ computedResult }}</div>
     <div class="buttons">
       <div v-for="row in buttons" :key="row">
         <button v-for="button in row" :key="button" @click="handleButtonClick(button)">
@@ -178,7 +193,18 @@ export default {
   border-radius: 8px;
   padding: 20px;
 }
-
+.result {
+  width: 100%;
+  padding: 1rem;
+  margin: 0.4rem 0;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #41b883;
+  color: white;
+  transition: background-color 0.3s;
+}
 input {
   width: 100%;
   padding: 10px;
