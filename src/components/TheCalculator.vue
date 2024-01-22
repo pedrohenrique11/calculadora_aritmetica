@@ -47,6 +47,9 @@ export default {
         case 'atan':
           this.calculateArcTangent();
           break;
+        case 'log':
+            this.calculateLog();
+          break;
         case '(':
           this.expression += button;
           break;
@@ -135,13 +138,21 @@ export default {
     }
     },
     calculateArcTangent() {
-      try {
+        try {
         const result = Math.atan(eval(this.expression));
         this.expression = result.toString();
       } catch (error) {
         this.expression = 'Erro';
       }
     },
+    calculateLog() {
+        try{
+            const result = Math.log(eval(this.expression));
+            this.expression = result.toString();
+        } catch (error) {
+            this.expression = 'Error';
+        }
+    }
   },
 };
 </script>
@@ -159,6 +170,46 @@ export default {
   </div>
 </template>
 
-<style>
+<style scoped>
+.calculator {
+  max-width: 400px;
+  margin: 6rem auto;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  padding: 20px;
+}
 
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 1rem;
+  margin: 0.4rem 0;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #41b883;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #3e8f61;
+}
 </style>

@@ -3,9 +3,6 @@ import CalculatorView from './views/CalculatorView.vue';
 </script>
 
 <template>
-  <header>
-      <h1>Calculadora</h1>
-  </header>
   <CalculatorView />
 </template>
 
