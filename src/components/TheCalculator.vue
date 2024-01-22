@@ -173,7 +173,7 @@ export default {
 <style scoped>
 .calculator {
   max-width: 400px;
-  margin: 6rem auto;
+  margin: 1rem auto;
   background-color: #f4f4f4;
   border-radius: 8px;
   padding: 20px;
